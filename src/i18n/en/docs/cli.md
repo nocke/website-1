@@ -91,9 +91,12 @@ Available in: `serve`, `watch`, `build`
 parcel build entry.js --target node
 ```
 
+Possible targets: `node`, `browser`, `electron`
+
 ⚠️ Target `node` and `electron` will not bundle package.json's `dependencies` (but will include `devDependencies`). This behavior can be overriden using [--bundle-node-modules](#force-node-modules-bundling) flag (see below).
 
-Possible targets: `node`, `browser`, `electron`
+⚠️ note: if you intend to build an electron application, you should generally use `--target: electron` for the ‘client-side’ `render.js` bundle and `--target node` for the `main.js` bundle.
+
 
 ### Force node modules bundling
 
